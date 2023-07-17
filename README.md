@@ -30,4 +30,3 @@ Finally, add the following snippet to your `docker-compose.yml`, substituting th
 
 ...
 ```
-# gluetun-deluge-port-manager
