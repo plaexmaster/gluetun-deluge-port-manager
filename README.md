@@ -19,13 +19,13 @@ Finally, add the following snippet to your `docker-compose.yml`, substituting th
     image: plaexmstr/gluetun-deluge-port-manager
     container_name: gluetun-deluge-port-manager
     volumes:
-      - /yourfolder:/tmp/gluetun #set "yourfolder" to the same directory you used for Gluetun
+      - /yourfolder:/gluetun #set "yourfolder" to the same directory you used for Gluetun
     network_mode: "service:gluetun"
     environment:
       DELUGE_SERVER: localhost
       DELUGE_PORT: 8112
       DELUGE_PASS: deluge #change this to your own
-      PORT_FORWARDED: /tmp/gluetun/forwarded_port
+      PORT_FORWARDED: /gluetun/forwarded_port
     restart: unless-stopped
 
 ...
