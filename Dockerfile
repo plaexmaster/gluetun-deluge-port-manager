@@ -2,12 +2,9 @@ FROM ubuntu:jammy
 
 LABEL version="1.0"
 
-RUN apt-get update
-RUN apt-get install --yes --quiet curl inotify-tools jq
-
 ENV DELUGE_SERVER=localhost
-ENV DELUGE_PORT=8112
-ENV DELUGE_PASS=deluge
+ENV DELIGE_CLI_USER=admin
+ENV DELUGE_CLI_PASS=deluge
 ENV PORT_FORWARDED=gluetun/forwarded_port
 
 COPY ./start.sh ./start.sh
