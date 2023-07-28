@@ -22,7 +22,7 @@ update_port () {
   response2=$(curl -s -b "'$COOKIES'" -H "Content-Type: application/json" -d '{"method": "core.get_config_value", "params": ["listen_ports"], "id": 1}' $DELUGE_SERVER:$DELUGE_PORT/json)
   listenports=$(echo "$response2" | jq -r '.result')
   echo "Ports changed to $listenports"
-  rm -f "/gluetun/deluge_cookies.txt"
+  rm -f $COOKIES
 }
 
 while true; do
