@@ -7,7 +7,7 @@ RUN apt-get install --yes --quiet curl inotify-tools jq
 
 ENV DELUGE_SERVER=localhost
 ENV DELUGE_PORT=8112
-ENV DELIGE_PASS=YOURPASSWORD
+ENV DELUGE_PASS=YOURPASSWORD
 ENV PORT_FORWARDED=gluetun/forwarded_port
 
 COPY ./start.sh ./start.sh
