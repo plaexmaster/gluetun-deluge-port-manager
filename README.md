@@ -1,7 +1,7 @@
 # gluetun-deluge port manager
 Automatically updates the listening port for deluge to the port forwarded by [Gluetun](https://github.com/qdm12/gluetun/). 
 
-Using qBittorent? See here: [gluetun-qbittorrent-port-manager](https://github.com/SnoringDragon/gluetun-qbittorrent-port-manager).
+Using qBittorent? See here: [gluetun-qbittorrent-port-manager](https://github.com/plaexmaster/gluetun-qbittorrent-port-manager).
 
 ## Description
 [Gluetun](https://github.com/qdm12/gluetun/) has the ability to forward ports for supported VPN providers, but Deluge does not have the ability to update its listening port dynamically.
