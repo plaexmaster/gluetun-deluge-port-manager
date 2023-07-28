@@ -29,8 +29,8 @@ Finally, add the following snippet to your `docker-compose.yml`, substituting th
     network_mode: "service:gluetun"
     environment:
       DELUGE_SERVER: localhost
-      DELUGE_CLI_USER: admin #change this to your own
-      DELUGE_CLI_PASS: deluge #change this to your own
+      DELUGE_CLI_USER: YOURUSERNAME #change this to your own
+      DELUGE_CLI_PASS: YOURPASSWORD #change this to your own
       PORT_FORWARDED: /gluetun/forwarded_port
     restart: unless-stopped
 
