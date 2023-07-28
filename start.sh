@@ -6,7 +6,7 @@ update_port () {
   FORMATTED_PORT="[$PORT, $PORT]"
   echo "Portnumber formatted to fit Deluge config: $FORMATTED_PORT"
   echo "Accessing Deluge WEBUI..."
-  cookie=$(curl -s -c - -H "Content-Type: application/json" -d '{"method": "auth.login", "params": ["'$DELUGE_PASS'"], "id": 1}' $DELUGE_SERVER:$DELUGE_PORT/json
+  cookie=$(curl -s -c - -H "Content-Type: application/json" -d '{"method": "auth.login", "params": ["'$DELUGE_PASS'"], "id": 1}' $DELUGE_SERVER:$DELUGE_PORT/json)
   response=$(echo "${cookie}" | curl -s -b - -H "Content-Type: application/json" -d '{"method": "web.get_hosts", "params": [], "id": 1}' $DELUGE_SERVER:$DELUGE_PORT/json)
   hostid=$(echo "$response" | jq -r '.result[0][0]')
   echo "HostID set to: $hostid"
