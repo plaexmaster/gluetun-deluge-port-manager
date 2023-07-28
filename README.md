@@ -5,7 +5,7 @@ Using qBittorent? See here: [gluetun-qbittorrent-port-manager](https://github.co
 
 ## Description
 [Gluetun](https://github.com/qdm12/gluetun/) has the ability to forward ports for supported VPN providers, but Deluge does not have the ability to update its listening port dynamically.
-This script available as a docker container automatically detects changes to the forwarded_port file created by [Gluetun](https://github.com/qdm12/gluetun/) and updates the Deluge's listening port. It also configure random port to false since we want to decide our own ports. This script uses "deluge-console" to update the config.
+This script available as a docker container automatically detects changes to the forwarded_port file created by [Gluetun](https://github.com/qdm12/gluetun/) and updates the Deluge's listening port. It also configure random port to false since we want to decide our own ports. This script uses curl to update the config.
 
 ## Setup
 Add a mounted volume to [Gluetun](https://github.com/qdm12/gluetun/) (e.g. /yourfolder:/tmp/gluetun).
